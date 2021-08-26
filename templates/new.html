@@ -1,0 +1,54 @@
+{{define "New"}}
+
+{{template "_head"}}
+{{template "_menu"}}
+
+<body style="background-color: #212529;">
+    <div class="jumbotron jumbotron-fluid text-white" style="background-color: #212529;" >
+        <div class="container">
+            <h1 class="display-4">Novo produto</h1>
+            <p class="lead">Insira os detalhes</p>
+        </div>
+    </div>
+    <form method="POST" action="insert">
+        <div class="row text-white">
+            <div class="col-sm-7">
+                <div class="form-group">
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" class="form-control bg-dark text-white">
+                </div>
+            </div>
+        </div>
+        <div class="row text-white">
+            <div class="col-sm-7">
+                <div class="form-group">
+                    <label for="descricao">Descrição:</label>
+                    <input type="text" name="descricao" class="form-control bg-dark text-white">
+                </div>
+            </div>
+        </div>
+        <div class="row text-white">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="preco">Preço:</label>
+                    <input type="number" name="preco" class="form-control bg-dark text-white" step="0.01">
+                </div>
+            </div>
+        </div>
+
+        <div class="row text-white">
+            <div class="col-sm-2">
+                <div class="form-group">
+                    <label for="quantidade">Quantidade:</label>
+                    <input type="number" name="quantidade" class="form-control bg-dark text-white">
+                </div>
+            </div>
+        </div>
+        <div>
+            <button type="submit" value="salvar" class="btn btn-success">Salvar</button>
+            <a class="btn btn-info " href="/" class="btn btn-primary">Voltar</a>
+        </div>   
+    </form>
+</body>
+</html>
+{{end}}
